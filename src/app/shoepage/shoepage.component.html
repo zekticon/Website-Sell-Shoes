@@ -1,0 +1,17 @@
+<app-not-found [visible]="!shoe" notFoundMessage="Product Not Found!" resetLinkText="Go To HomePage"></app-not-found>
+<p>Chi Tiết Sản Phẩm</p>
+<div *ngIf="shoe" class="container">
+    <div class="col-md-4" routerLink="/shoe/{{shoe.id}}" style="margin-left: 200px;">
+        <div class="item">
+            <img src="{{shoe.imageUrl}}" alt="{{shoe.name}}">
+        </div>
+    </div>
+    <div class="detail" >
+        <a style="font-size: 35px;">{{shoe.name}}</a>
+        <br>
+        <span style="font-size: 20px;">{{shoe.price|currency:'VND':'symbol':'3.0-0':'fr'}}</span>
+        <div >
+            <button (click)="addToCart()">Thêm Sản Phẩm</button>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,91 @@
+#page {
+    width: 100%;
+    height: 785px;
+    background:#0D0F1A;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;   
+}
+#page .logo {
+    position:absolute;
+    top:62px;
+    left:66px;
+    color:#fff;
+}
+.content {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.left {
+    width: 50%;
+    padding-top:220px;
+    padding-left:150px;
+}
+
+.left .title {
+    height: 100px;
+}
+
+.left .title h1 {
+    color:#fff;
+    font-size:95px;
+    letter-spacing: 10px;
+}
+
+.left p {
+
+    font-size:20px;
+    color:#fff;
+    margin-top:20px;
+}
+.right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    width: 492px;
+    height: 596px;
+    border:1px solid aqua;
+    box-shadow: 0px 0px 10px aqua;
+}
+
+form h1 {
+    margin-top:76px;
+    color:#fff;
+    text-align: center;
+    margin-bottom:67px;
+}
+
+form input {
+    display: block;
+    width: 350px;
+    height: 50px;
+    margin:0px auto;
+    margin-bottom:20px;
+    padding-left:20px;
+    background:#111D2E;
+    color:#fff;
+    
+}
+
+form input[type = 'submit']{
+    width: 212px;
+    height: 53px;
+    color:#fff;
+    border:1px solid #27F2FF;
+    margin-top:50px;
+    padding:0;
+}
+form p{
+    text-align: center;
+    color:#fff;
+
+}

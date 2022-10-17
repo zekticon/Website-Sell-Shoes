@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <a mat-button routerLink="Trang chủ"><mat-icon>home</mat-icon>Trang chủ</a>
+    <button mat-button [matMenuTriggerFor]="menuBD">Bóng đá</button>
+    <mat-menu #menuBD="matMenu">
+        <button mat-menu-item routerLink="Bóng đá">Giày Bóng Đá</button>
+        <button mat-menu-item routerLink="Phụ kiện">Phụ Kiện Bóng Đá</button>
+    </mat-menu>
+    <a mat-button routerLink="AboutUs">Về Công Ty</a>
+    <a mat-button routerLink="Contact">Tương Tác</a>
+    <div class="spacer"></div>
+    <a mat-raised-button color="accent" routerLink="Đăng nhập"><mat-icon>person</mat-icon>Đăng nhập</a>
+    <a mat-button routerLink="/shopping-cart"><mat-icon>shopping_cart</mat-icon> Giỏ Hàng</a>
+</mat-toolbar>

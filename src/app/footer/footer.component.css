@@ -1,0 +1,90 @@
+#footer {
+    border-top:1px solid gray;
+    background:#262626;
+    height:400px;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+#footer .box {
+    width:calc(100% / 3);
+    height: 100%;
+    padding:60px;
+    margin:0px 10px;
+    color:#fff;
+}
+#footer .box .item {
+    display: flex;
+    align-items: center;
+    margin:20px 0px;
+}
+#footer .box .icon {
+    width:50px;
+    height: 50px;
+    background:#000;
+    margin-right:20px;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:all 0.5s;
+
+}
+#footer .box .icon:hover {
+
+    border-radius: 50%;
+}
+#footer .box .icon ion-icon {
+    font-size:25px;
+    
+}
+
+#footer .box form {
+  display: block;
+  margin:0px auto;
+
+}
+#footer .box form input {
+    border:none;
+    outline:none;
+    background:none;
+    border-bottom:1px solid gray;
+    margin-bottom:10px;
+    
+}
+#footer .box form #firstname,#footer .box #surname{
+    width: 100%;
+    padding:10px 0px;
+}
+#footer .box form #email {
+    padding:10px 0px;
+    width:100%;
+}
+#footer .box form #phone {
+    padding:10px 0px;
+    width:100%;
+}
+#footer .box form input[type ='submit']{
+    width: 200px;
+    height: 40px;
+    background:transparent;
+    border:1px solid #fff;
+    color:black;
+    margin-top:20px;
+    text-align: center;
+    line-height: 40px;
+    color:#fff;
+}
+
+#footer .box button {
+    width:200px;
+    height: 50px;
+    color:#fff;
+    background:transparent;
+    border:1px solid #fff;
+    margin-top:40px;
+}

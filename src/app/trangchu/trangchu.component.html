@@ -1,0 +1,47 @@
+<div class="container">
+    <h1>Danh Sách Sản Phẩm</h1>
+    <div class="row">
+    <div class="col-lg-4">
+        <div class="cartegory-left">
+            <ul>
+                <li><a mat-button routerLink="/Bóng đá">Giày bóng đá</a></li>
+                <li><a mat-button routerLink="/Phụ kiện">Phụ kiện bóng đá</a></li>
+                <li><a mat-button routerLink="/AboutUs">Về Công Ty</a></li>
+                <li><a mat-button routerLink="/Contact">Tương Tác</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="grid-container">
+            <div class="row" *ngFor="let shoe of shoes; let i=index ">
+                <div *ngIf="i<6">
+                    <div class="col-lg-6" routerLink="/shoe/{{shoe.id}}">
+                        <div class="item">
+                            <img src="{{shoe.imageUrl}}" alt="{{shoe.name}}">
+                            <div >
+                                <a >{{shoe.name}}</a>
+                                <br>
+                                <span>{{shoe.price|currency:'VND':'symbol':'3.0-0':'fr'}}</span>
+                            </div>
+                        </div>
+                    </div>              
+                </div>
+            </div>
+            <div class="row" *ngFor="let shoeBR of shoeBRs; let i=index ">
+                <div *ngIf="i<8">
+                    <div class="col-lg-6" routerLink="/phukien/{{shoeBR.id}}">
+                        <div class="item">
+                            <img src="{{shoeBR.imageUrl}}" alt="{{shoeBR.name}}">
+                            <div >
+                                <a >{{shoeBR.name}}</a>
+                                <br>
+                                <span>{{shoeBR.price|currency:'VND':'symbol':'3.0-0':'fr'}}</span>
+                            </div>
+                        </div>
+                    </div>              
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

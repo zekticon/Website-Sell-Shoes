@@ -1,0 +1,34 @@
+<app-search1></app-search1>
+<app-not-found [visible]="!shoeBRs||shoeBRs.length<=0" resetLinkText="Reset Search"></app-not-found>
+<div class="container">
+    <h1>GIÀY BÓNG RỔ</h1>
+    <div class="row">
+    <div class="col-lg-4">
+        <div class="cartegory-left">
+            <ul>
+                <li><a mat-button routerLink="Bóng rổ">Giày bóng rổ</a></li>
+                <li><a mat-button routerLink="Quần áo bd">Trang phục</a></li>
+                <li><a mat-button routerLink="Phụ kiện bd">Phụ kiện</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="grid-container">
+            <div class="row" *ngFor="let shoeBR of shoeBRs; let i=index ">
+                <div *ngIf="i<6">
+                    <div class="col-lg-6" routerLink="/shoeBR/{{shoeBR.id}}">
+                        <div class="item">
+                            <img src="{{shoeBR.imageUrl}}" alt="{{shoeBR.name}}">
+                            <div >
+                                <a >{{shoeBR.name}}</a>
+                                <br>
+                                <span>{{shoeBR.price|currency:'VND':'symbol':'3.0-0':'fr'}}</span>
+                            </div>
+                        </div>
+                    </div>              
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

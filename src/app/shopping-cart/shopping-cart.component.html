@@ -1,0 +1,40 @@
+<h1>Giỏ Hàng</h1>
+<app-not-found [visible]="!cart || cart.items.length<=0" notFoundMessage="Không Tìm Thấy Sản Phẩm" resetLinkText="Quay Về Trang Chủ"></app-not-found>
+<div *ngIf="cart && cart.items.length>0" class="container">
+    <ul>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+                <img [src]="cartItem.shoe.imageUrl" [alt]="cartItem.shoe.name" >
+            </div>
+            <div>
+                <a routerLink="/shoe/{{cartItem.shoe.id}}">
+                    {{cartItem.shoe.name}}
+                </a>
+            </div>
+            <div>
+                <select #quantitySelect [value]="cartItem.quantity" (change)="changeQuantity(cartItem, quantitySelect.value)">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+                
+            </div>
+            <div>
+                {{cartItem.price | currency:'VND':'symbol':'3.0-0':'fr'}}
+            </div>
+            <div>
+                <button class = "remove" (click)="removeFromCart(cartItem)">Xóa</button>
+            </div>
+        </li>
+    </ul>
+    <div  class="checkout">
+        <div>
+            <div class="shoe">{{cart.TongSoLuong}}</div>
+            <div class="checkout-price">{{cart.TongGia|currency:'VND':'symbol':'3.0-0':'fr'}}</div>
+        </div>
+        <a routerLink="/checkout">Thanh Toán</a>
+    </div>
+</div>

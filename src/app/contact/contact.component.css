@@ -1,0 +1,51 @@
+.to input[type="text"] {
+	padding: 12px;
+	width: 95%;
+	font-size: 0.85em;
+	margin: 10px 0;
+	border: 1px solid #bababa;
+	color: #999;
+	background:none;
+	outline: none;
+}
+.text input[type="text"], .text textarea {
+	width: 95%;
+	font-size: 0.85em;
+	margin: 10px 0;
+	border: 1px solid #bababa;
+	color: #999;
+	outline: none;
+	background:none;
+	height:178px;
+	padding: 12px;
+	resize: none;
+}
+.contact_form h2{
+	font-size: 2em;
+	color: #000;
+	text-transform: uppercase;
+    margin-bottom: 1em;
+	text-align:center;
+	margin:2em 0 1em 0;
+}
+.but__center {
+	text-align: center;
+	margin:2em 0;
+}
+.but__center input[type="submit"] {
+	background:none;
+	display: inline-block;
+	color:#ECCAAD;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	font-weight:600;
+}
+.but__center input[type="submit"]:hover{
+	color:#000;
+}

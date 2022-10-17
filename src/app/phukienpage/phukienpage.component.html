@@ -1,0 +1,17 @@
+<app-not-found [visible]="!shoeBR" notFoundMessage="Product Not Found!" resetLinkText="Go To HomePage"></app-not-found>
+<p>Chi Tiết Sản Phẩm</p>
+<div *ngIf="shoeBR" class="container">
+    <div class="col-md-4" routerLink="/phukien/{{shoeBR.id}}" style="margin-left: 200px;">
+        <div class="item">
+            <img src="{{shoeBR.imageUrl}}" alt="{{shoeBR.name}}">
+        </div>
+    </div>
+    <div class="detail" >
+        <a style="font-size: 35px;">{{shoeBR.name}}</a>
+        <br>
+        <span style="font-size: 20px;">{{shoeBR.price|currency:'VND':'symbol':'3.0-0':'fr'}}</span>
+        <div >
+            <button (click)="addToCart1()">Thêm Sản Phẩm</button>
+        </div>
+    </div>
+</div> 
